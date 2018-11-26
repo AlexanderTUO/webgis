@@ -5,7 +5,7 @@
   Time: 13:43
   To change this template use File | Settings | File Templates.
 --%>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- 顶部菜单 -->
 <nav role="navigation" class="navbar navbar-static-top">
     <div class="container-fluid">
@@ -265,7 +265,7 @@
                     <li>
                         <a class="tooltip-tip ajax-load" href="/feature" title="Map">
                             <i class="icon-location"></i>
-                            <span>矢量绘制查询</span>
+                            <span>矢量绘制与查询</span>
                         </a>
                     </li>
                 </ul>
