@@ -248,7 +248,7 @@
                     <li>
                         <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
 
-                            <span class="widget-menu"></span>
+                            <span class="widget-menu">矢量绘制</span>
                             <i data-toggle="tooltip" class="entypo-cog pull-right config-wrap"></i>
 
                         </a>
@@ -262,11 +262,11 @@
                     </li>
 
                 </ul>
-
+                <%--标注--%>
                 <ul id="Marker" class="topnav menu-left-nest">
                     <li>
                         <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
-                            <span class="widget-menu"></span>
+                            <span class="widget-menu">标注</span>
                             <i data-toggle="tooltip" class="entypo-cog pull-right config-wrap"></i>
 
                         </a>
@@ -285,6 +285,25 @@
                             <span>聚合标注</span>
                         </a>
                     </li>
+                </ul>
+
+                <%--标注--%>
+                <ul id="Marker" class="topnav menu-left-nest">
+                    <li>
+                        <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
+                            <span class="widget-menu">高级功能</span>
+                            <i data-toggle="tooltip" class="entypo-cog pull-right config-wrap"></i>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="tooltip-tip ajax-load" href="/projectionTransformation" title="popup">
+                            <i class="icon-location"></i>
+                            <span>投影转换</span>
+                        </a>
+                    </li>
+
                 </ul>
 
 

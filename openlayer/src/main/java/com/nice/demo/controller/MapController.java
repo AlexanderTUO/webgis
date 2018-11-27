@@ -38,4 +38,9 @@ public class MapController {
     public String template() {
         return "template";
     }
+
+    @RequestMapping("projectionTransformation")
+    public String projectionTransformation() {
+        return "projectionTransformation";
+    }
 }
