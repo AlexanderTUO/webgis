@@ -139,7 +139,7 @@
                             </label>
                         </div>
                         <div class="container">
-                            <label>投影坐标系（EPSG：2857）</label>
+                            <label>投影坐标系（EPSG：3857）</label>
                             <div id="map1" class="map"></div>
                         </div>
                         <div class="container">
@@ -199,6 +199,7 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
 <script type="text/javascript" src="lib/jquery-ui.js"></script>
+<script type="text/javascript" src="lib/proj4.js"></script>
 
 <%--自定义--%>
 <script type="text/javascript" src="js/projectionTransformation.js"></script>

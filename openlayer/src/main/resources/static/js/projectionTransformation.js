@@ -1,7 +1,6 @@
 $(document).ready(function () {
     //初始化高德地图
     var viewGaode = new ol.View({
-        projection: costumProjection,
         zoom: 0,
         center: [0, 0],
         resolutions: [65536, 32768, 16384, 8192, 4096, 2048]
@@ -17,6 +16,7 @@ $(document).ready(function () {
 
     var map = new ol.Map({
         target: 'map1',
+        renderer: 'canvas',
         layer: null,
         // view: view //高德view
         view: view //osmView
@@ -36,7 +36,7 @@ $(document).ready(function () {
     // 定义矢量地图
     var vectorLayer = new ol.layer.Vector({
         source:ol.source.Vector({
-            url: "data / geojson / countries - 110m.json",
+            url: 'data/geojson/countries-110m.json',
             format: new ol.format.GeoJSON()
         })
     })
@@ -45,6 +45,10 @@ $(document).ready(function () {
     map.addLayer(OSM);
     map.addLayer(vectorLayer);
     // map.addLayer(gaodeMapLayer);
+
+    var graticule1 = new ol.Graticule({
+        map:map
+    })
 
 
     var style = new ol.style.Style({
@@ -68,22 +72,32 @@ $(document).ready(function () {
     var transformMap = null;
 
     // 定义摩尔维特坐标系
-    (new ol.proj.proj4).defs('ESRI:53009', '+proj=moll +lon_0=0 +x_0=0 +y_0=0 +a=6371000 +b=6371000 +units=m +no_defs');
+    proj4.defs('ESRI:53009', '+proj=moll +lon_0=0 +x_0=0 +y_0=0 +a=6371000 ' +
+        '+b=6371000 +units=m +no_defs');
+    register(proj4);
 
-    var costumProjection = new ol.proj.Projection({
+    // var customProjection = new ol.proj.Projection({
+    //     code: 'ESRI:53009',
+    //     extent: [-9009954.605703328, -9009954.605703328,
+    //         9009954.605703328, 9009954.605703328],
+    //     worldExtent: [-179, -89.99, 179, 89.99]
+    // })
+    var sphereMollweideProjection = new Projection({
         code: 'ESRI:53009',
-        extent:[-9009954.605703328,-9009954.605703328,9009954.605703328,9009954.605703328],
-        worldExtent:[-179,-90,179,90]
-    })
+        extent: [-9009954.605703328, -9009954.605703328,
+            9009954.605703328, 9009954.605703328],
+        worldExtent: [-179, -89.99, 179, 89.99]
+    });
 
     document.getElementById("projection").onclick=function () {
         if (transformMap == null || transformMap == undefined) {
             transformMap = new ol.Map({
+                keyboardEventTarget: document,
                 layers: [vectorLayer],
-                render: "convas",
+                // renderer: "canvas",
                 target: "map2",
                 view: new ol.View({
-                    projection: costumProjection,
+                    projection: sphereMollweideProjection,
                     zoom: 0,
                     center: [0, 0],
                     resolutions: [65536, 32768, 16384, 8192, 4096, 2048]
