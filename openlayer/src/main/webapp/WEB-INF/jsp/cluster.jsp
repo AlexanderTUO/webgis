@@ -116,7 +116,7 @@
             </li>
             <li><i class="fa fa-lg fa-angle-right"></i>
             </li>
-            <li><a href="#" title="Sample page 1">Feature</a>
+            <li><a href="#" title="Sample page 1">Popup</a>
             </li>
             <li class="pull-right">
                 <div class="input-group input-widget">
@@ -134,33 +134,10 @@
                 <div class="col-sm-12">
                     <div class="nest" id="DripClose">
                         <div id="menu">
-                            <label>几何图形类型：&nbsp;</label>
-                            <select id="type">
-                                <option value="Point">点</option>
-                                <option value="LineString">线</option>
-                                <option value="Polygon">面</option>
-                            </select>
-                            <input type="button" value="清空" id="empty">
-                            <input type="button" value="查询" id="query">
-                        </div>
-                        <div id="dialog-confirm" title="图形属性信息设置">
-                            <label >图形类型（GeoType）：</label>
-                            <select id="geoType">
-                                <option value="Point" selected="selected" disabled="disabled">点</option>
-                                <option value="LineString" disabled="disabled">线</option>
-                                <option value="Polygon" disabled="disabled">多边形</option>
-                            </select><br/>
-                            <label >信息类别（infoType）：</label>
-                            <select id="infoType">
-                                <option value="Point" selected="selected" disabled="disabled">兴趣点</option>
-                                <option value="LineString" disabled="disabled">道路线</option>
-                                <option value="Polygon" disabled="disabled">高校区域</option>
-                            </select><br/>
-                            <label>名称（name）：<input id='name' type="text" value=""></label><br/>
-                            <label>省市（city）：<input id='city' type="text" value=""></label>
+                            <input type="button" value="添加聚合标注" id="addCluster">
+                            <input type="button" value="移除聚合标注" id="removeCluster">
                         </div>
                         <div id="map"></div>
-                        <div id="popup" title="我是气泡"></div>
                     </div>
                 </div>
             </div>
@@ -215,8 +192,7 @@
 <script type="text/javascript" src="lib/jquery-ui.js"></script>
 
 <%--自定义--%>
-<script type="text/javascript" src="js/feature.js"></script>
-<link rel="stylesheet" href="css/feature.css">
+<script type="text/javascript" src="js/cluster.js"></script>
 
 
 <!-- /MAIN EFFECT -->

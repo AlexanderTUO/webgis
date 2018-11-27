@@ -19,8 +19,6 @@
             </button>
 
 
-
-
             <div id="logo-mobile" class="visible-xs">
                 <h1>WEB管理<span>v1.2</span></h1>
             </div>
@@ -246,7 +244,7 @@
     <div class="skin-part">
         <div id="tree-wrap">
             <div class="side-bar">
-                <ul id="menu-showhide" class="topnav menu-left-nest">
+                <ul id="Map" class="topnav menu-left-nest">
                     <li>
                         <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
 
@@ -257,15 +255,34 @@
                     </li>
 
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/gaode" title="Map">
-                            <i class="icon-location"></i>
-                            <span>Map</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="tooltip-tip ajax-load" href="/feature" title="Map">
+                        <a class="tooltip-tip ajax-load" href="/feature" title="feature">
                             <i class="icon-location"></i>
                             <span>矢量绘制与查询</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul id="Marker" class="topnav menu-left-nest">
+                    <li>
+                        <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
+                            <span class="widget-menu"></span>
+                            <i data-toggle="tooltip" class="entypo-cog pull-right config-wrap"></i>
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="tooltip-tip ajax-load" href="/popup" title="popup">
+                            <i class="icon-location"></i>
+                            <span>气泡</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="tooltip-tip ajax-load" href="/cluster" title="cluster">
+                            <i class="icon-location"></i>
+                            <span>聚合标注</span>
                         </a>
                     </li>
                 </ul>

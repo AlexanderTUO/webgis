@@ -6,15 +6,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * @Author: tyk
  * @Date: 2018/11/26 11:14
- * @Description:
+ * @Description:菜单
  */
 @Controller
 //@RequestMapping("/map/")
 public class MapController {
 
+
+
     @RequestMapping("gaode")
-    public String index() {
+    public String gaode() {
+        return "gaode";
+    }
+
+    @RequestMapping("feature")
+    public String feature() {
         return "feature";
+    }
+
+    @RequestMapping("popup")
+    public String popup() {
+        return "popup";
+    }
+
+    @RequestMapping("cluster")
+    public String cluster() {
+        return "cluster";
     }
 
     @RequestMapping("template")
