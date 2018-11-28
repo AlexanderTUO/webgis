@@ -132,7 +132,7 @@
         <div class="content-wrap">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="nest" id="DripClose">
+                    <%--<div class="nest" id="DripClose">--%>
                         <div id="menu">
                             <label>几何图形类型：&nbsp;</label>
                             <select id="type">
@@ -160,8 +160,7 @@
                             <label>省市（city）：<input id='city' type="text" value=""></label>
                         </div>
                         <div id="map"></div>
-                        <div id="popup" title="我是气泡"></div>
-                    </div>
+                    <%--</div>--%>
                 </div>
             </div>
         </div>

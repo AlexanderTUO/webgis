@@ -133,20 +133,8 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="nest" id="DripClose">
-                        <div id="menu">
-                            <label class="title" for="projection">
-                                地图投影转换演示：<button id="projection">投影转换</button>
-                            </label>
-                        </div>
-                        <div class="container">
-                            <label>投影坐标系（EPSG：3857）</label>
-                            <div id="map1" class="map"></div>
-                        </div>
-                        <div class="container">
-                            <label>投影坐标系（EPSG：53009）</label>
-                            <div id="map2" class="map"></div>
-                        </div>
                         <div id="map"></div>
+                        <div id="popup" title="我是气泡"></div>
                     </div>
                 </div>
             </div>
@@ -199,11 +187,10 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
 <script type="text/javascript" src="lib/jquery-ui.js"></script>
-<script type="text/javascript" src="lib/proj4.js"></script>
 
 <%--自定义--%>
-<script type="text/javascript" src="js/projectionTransformation.js"></script>
-<style type="text/css" href="css/projectionTransformation.css"></style>
+<script type="text/javascript" src="js/popup.js"></script>
+<link rel="stylesheet" href="css/popup.css">
 
 
 <!-- /MAIN EFFECT -->

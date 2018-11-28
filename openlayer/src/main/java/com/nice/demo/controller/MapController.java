@@ -43,4 +43,15 @@ public class MapController {
     public String projectionTransformation() {
         return "projectionTransformation";
     }
+
+    @RequestMapping("MultiViewLinkage")
+    public String MultiViewLinkage() {
+        return "MultiViewLinkage";
+    }
+
+    @RequestMapping("heatMap")
+    public String heatMap() {
+        return "heatMap";
+    }
+
 }

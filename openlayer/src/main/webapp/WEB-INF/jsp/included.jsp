@@ -298,9 +298,23 @@
                     </li>
 
                     <li>
-                        <a class="tooltip-tip ajax-load" href="/projectionTransformation" title="popup">
+                        <a class="tooltip-tip ajax-load" href="/projectionTransformation" title="projectionTransformation">
                             <i class="icon-location"></i>
                             <span>投影转换</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="tooltip-tip ajax-load" href="/MultiViewLinkage" title="MultiViewLinkage">
+                            <i class="icon-location"></i>
+                            <span>地图联动</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="tooltip-tip ajax-load" href="/heatMap" title="heatMap">
+                            <i class="icon-location"></i>
+                            <span>热力图</span>
                         </a>
                     </li>
 

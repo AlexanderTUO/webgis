@@ -74,7 +74,7 @@ $(document).ready(function () {
     // 定义摩尔维特坐标系
     proj4.defs('ESRI:53009', '+proj=moll +lon_0=0 +x_0=0 +y_0=0 +a=6371000 ' +
         '+b=6371000 +units=m +no_defs');
-    register(proj4);
+    ol.proj.proj4.register(proj4);
 
     // var customProjection = new ol.proj.Projection({
     //     code: 'ESRI:53009',
@@ -82,7 +82,7 @@ $(document).ready(function () {
     //         9009954.605703328, 9009954.605703328],
     //     worldExtent: [-179, -89.99, 179, 89.99]
     // })
-    var sphereMollweideProjection = new Projection({
+    var sphereMollweideProjection = new ol.proj.Projection({
         code: 'ESRI:53009',
         extent: [-9009954.605703328, -9009954.605703328,
             9009954.605703328, 9009954.605703328],

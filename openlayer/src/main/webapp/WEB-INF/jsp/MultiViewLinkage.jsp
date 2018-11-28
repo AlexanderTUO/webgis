@@ -33,6 +33,13 @@
     <![endif]-->
     <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/minus.png">
+    <style>
+        .container{
+            width: 33%;
+            height: 100%;
+            float: left;
+        }
+    </style>
 </head>
 
 <body><div id="awwwards" class="right black"><a href="http://www.awwwards.com/best-websites/apricot-navigation-admin-dashboard-template" target="_blank">best websites of the world</a></div>
@@ -132,22 +139,20 @@
         <div class="content-wrap">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="nest" id="DripClose">
-                        <div id="menu">
-                            <label class="title" for="projection">
-                                地图投影转换演示：<button id="projection">投影转换</button>
-                            </label>
+                    <%--<div class="nest" id="DripClose">--%>
+                        <div class="container">
+                            <label>Canvas</label>
+                            <div id="canvasMap" class="map"></div>
                         </div>
                         <div class="container">
-                            <label>投影坐标系（EPSG：3857）</label>
-                            <div id="map1" class="map"></div>
+                            <label>DOM</label>
+                            <div id="domMap" class="map"></div>
                         </div>
                         <div class="container">
-                            <label>投影坐标系（EPSG：53009）</label>
-                            <div id="map2" class="map"></div>
+                            <label>WebGL</label>
+                            <div id="webglMap" class="map"></div>
                         </div>
-                        <div id="map"></div>
-                    </div>
+                    <%--</div>--%>
                 </div>
             </div>
         </div>
@@ -202,8 +207,7 @@
 <script type="text/javascript" src="lib/proj4.js"></script>
 
 <%--自定义--%>
-<script type="text/javascript" src="js/projectionTransformation.js"></script>
-<style type="text/css" href="css/projectionTransformation.css"></style>
+<script type="text/javascript" src="js/MultiViewLinkage.js"></script>
 
 
 <!-- /MAIN EFFECT -->
@@ -212,10 +216,6 @@
         "margin-top": "50px"
     });
 </script>
-
-
-
-
 
 </body>
 
