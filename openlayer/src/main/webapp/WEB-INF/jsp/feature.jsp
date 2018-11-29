@@ -23,6 +23,9 @@
 
     <link href="assets/css/icons-style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+
 
 
 
@@ -209,8 +212,7 @@
 <script src="ol-5.3.0/ol.js" type="text/javascript" charset="utf-8"></script>
 
 <%--jquery-ui--%>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+
 <script type="text/javascript" src="lib/jquery-ui.js"></script>
 
 <%--自定义--%>

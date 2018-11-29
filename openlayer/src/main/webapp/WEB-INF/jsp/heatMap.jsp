@@ -24,18 +24,21 @@
     <link href="assets/css/icons-style.css" rel="stylesheet">
 
 
-
-
-
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/minus.png">
+    <style>
+
+    </style>
 </head>
 
-<body><div id="awwwards" class="right black"><a href="http://www.awwwards.com/best-websites/apricot-navigation-admin-dashboard-template" target="_blank">best websites of the world</a></div>
+<body>
+<div id="awwwards" class="right black"><a
+        href="http://www.awwwards.com/best-websites/apricot-navigation-admin-dashboard-template" target="_blank">best
+    websites of the world</a></div>
 <!-- Preloader -->
 <div id="preloader">
     <div id="status">&nbsp;</div>
@@ -64,12 +67,13 @@
                     <div class="devider-vertical visible-lg"></div>
                     <div class="tittle-middle-header">
 
-                        <div class="alert">
-                            <button type="button" class="close" data-dismiss="alert">×</button>
-                            <span class="tittle-alert entypo-info-circled"></span>
-                            Welcome back,&nbsp;
-                            <strong>Dave mattew!</strong>&nbsp;&nbsp;Your last sig in at Yesterday, 16:54 PM
-                        </div>
+                        <form>
+                            <label>热点半径（radius size）：
+                                <input type="range" id="radius" min="1" max="50" step="1"
+                                                            value="10"/></label>
+                            <label>模糊尺寸（blur size ）：
+                                <input type="range" id="blur" min="1" max="50" step="1" value="15"/></label>
+                        </form>
 
                     </div>
 
@@ -78,7 +82,8 @@
                     <div class="devider-vertical visible-lg"></div>
                     <div class="btn-group btn-wigdet pull-right visible-lg">
                         <div class="btn">
-                            Widget</div>
+                            Widget
+                        </div>
                         <button data-toggle="dropdown" class="btn dropdown-toggle" type="button">
                             <span class="caret"></span>
                             <span class="sr-only">Toggle Dropdown</span>
@@ -143,7 +148,6 @@
         <!-- /END OF CONTENT -->
 
 
-
         <!-- FOOTER -->
         <div class="footer-space"></div>
         <div id="footer">
@@ -153,7 +157,9 @@
                 <p id="clock">
             </div>
             <div class="copyright">Make with Love
-                <span class="entypo-heart"></span>Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a> All Rights Reserved</div>
+                <span class="entypo-heart"></span>Collect from <a href="http://www.cssmoban.com/" title="网页模板"
+                                                                  target="_blank">网页模板</a> All Rights Reserved
+            </div>
             <div class="devider-footer"></div>
 
         </div>
@@ -173,14 +179,10 @@
 <script type="text/javascript" src="assets/js/main.js"></script>
 
 
-
-
-
-
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
 
 <%--openlayer--%>
-<link rel="stylesheet" href="ol-5.3.0/ol.css" type="text/css" />
+<link rel="stylesheet" href="ol-5.3.0/ol.css" type="text/css"/>
 <script src="ol-5.3.0/ol.js" type="text/javascript" charset="utf-8"></script>
 
 <%--jquery-ui--%>
@@ -189,8 +191,7 @@
 <script type="text/javascript" src="lib/jquery-ui.js"></script>
 
 <%--自定义--%>
-<script type="text/javascript" src="js/popup.js"></script>
-<link rel="stylesheet" href="css/popup.css">
+<script type="text/javascript" src="js/heatMap.js"></script>
 
 
 <!-- /MAIN EFFECT -->
@@ -199,9 +200,6 @@
         "margin-top": "50px"
     });
 </script>
-
-
-
 
 
 </body>
