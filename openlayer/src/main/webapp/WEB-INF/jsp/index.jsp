@@ -79,7 +79,6 @@
                             <strong>Dave mattew!</strong>&nbsp;&nbsp;Your last sig in at Yesterday, 16:54 PM
                         </div>
 
-
                     </div>
 
                 </div>

@@ -188,6 +188,9 @@ $(document).ready(function () {
             }
         });
     }
+    //
+
+
     // 绑定查询按钮
     $("#query").click(function () {
         $.ajax({
@@ -208,11 +211,83 @@ $(document).ready(function () {
                     }
                     else if (data[index].type == "LineString") {
                         var lineString = new ol.Feature(new ol.geom.LineString(coordinate));
+
+                        // var lineStringSty = new ol.style.Style({
+                        //     stroke: new ol.style.Stroke({
+                        //         color: '#3231ff',
+                        //         width: 2,
+                        //         lineCap: 0.2,
+                        //         lineJoin:'bevel',
+                        //         lineDash:[1,2,3,4,5,6],
+                        //     }),
+                        // })
+                        //
+                        // lineString.setStyle(lineStringSty);
+
+                        var cnv = document.createElement('canvas');
+                        var ctx = cnv.getContext('2d');
+                        var img = new Image();
+                        img.src = 'images/Railroad.png';
+                        img.height = 5;
+                        img.width = 5;
+
+                        img.onload = function(){
+                            var pattern = ctx.createPattern(img, 'repeat');
+
+                            lineString.setStyle(new ol.style.Style({
+                                stroke: new ol.style.Stroke({
+                                    color: pattern,
+                                    width: 5,
+                                    height:5
+                                })
+                            }));
+                        };
+
                         querySource.addFeature(lineString);
                     }
                     else if (data[index].type == "Polygon") {
                         var polygon = new ol.Feature(new ol.geom.Polygon(coordinate));
+                        // var polygonSty = new ol.style.Style({
+                        //     stroke: new ol.style.Stroke({
+                        //         color: '#19ff0f',
+                        //         width: 2
+                        //     }),
+                        //     fill:new ol.style.Fill({
+                        //         color: 'rgba(255,255,255,0.2)'
+                        //     }),
+                        //     image: new ol.style.Circle({
+                        //         radius: 15,
+                        //         fill:new ol.style.Fill({
+                        //             color: '#ff382d',
+                        //         })
+                        //     })
+                        // })
+
+                        // var polygonSty = new ol.style.Icon({
+                        //     src: "images/icon.png"
+                        // })
+                        // polygon.setStyle(polygonSty);
                         querySource.addFeature(polygon);
+
+                        var c = document.createElement('canvas');
+                        var ctx = c.getContext('2d');
+                        ctx.clearRect(0,0,c.width,c.height);
+                        var img = new Image();
+                        // img.src = 'images/icon.png';
+                        img.src = 'images/Railroad.png';
+                        img.width = 8;
+                        img.height = 8;
+
+                        img.onload = function(){
+                            var pattern = ctx.createPattern(img, 'repeat');
+                            polygon.setStyle(new ol.style.Style({
+                                fill: new ol.style.Fill({
+                                    color: pattern,
+                                    width: 5,
+                                    height:5
+                                })
+                            }));
+                        };
                     }
                 }
                 queryLayer.setSource(querySource);
